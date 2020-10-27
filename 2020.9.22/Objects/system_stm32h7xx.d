@@ -1,16 +1,16 @@
 ./objects/system_stm32h7xx.o: CMSIS\system_stm32h7xx.c CMSIS\stm32h7xx.h \
   CMSIS\stm32h743xx.h CMSIS\core_cm7.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h CMSIS\cmsis_compiler.h \
-  CMSIS\cmsis_armclang.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
+  D:\software\keilMDK\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  CMSIS\cmsis_compiler.h CMSIS\cmsis_armclang.h \
+  D:\software\keilMDK\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
+  D:\software\keilMDK\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
   CMSIS\system_stm32h7xx.h HAL_Library\inc\stm32h7xx_hal.h \
   HAL_Library\inc\stm32h7xx_hal_conf.h \
   HAL_Library\inc\stm32h7xx_hal_rcc.h \
   HAL_Library\inc\stm32h7xx_hal_def.h CMSIS\stm32h7xx.h \
   HAL_Library\inc\Legacy\stm32_hal_legacy.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h \
+  D:\software\keilMDK\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  D:\software\keilMDK\ARM\ARMCLANG\Bin\..\include\math.h \
   HAL_Library\inc\stm32h7xx_hal_rcc_ex.h \
   HAL_Library\inc\stm32h7xx_hal_gpio.h \
   HAL_Library\inc\stm32h7xx_hal_gpio_ex.h \

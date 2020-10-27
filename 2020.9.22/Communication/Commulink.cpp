@@ -10,6 +10,12 @@
 #include "Sensors.hpp"
 #include "Parameters.hpp"
 #include <map>
+/*************************我自己加的************************************/
+#include "SensorsBackend.hpp"
+#include "drv_Uart1.hpp"
+//maxi:最后两个头文件SensorsBackend.hpp是我自己加的
+//maxi:我很好奇他之前居然没有include过uart1的驱动头文件，那它怎么调用uart的驱动函数的，它好像是在uart1的驱动文件里面#include "Commulink.hpp"，而且在驱动文件里面绑定的port.read这一类函数。
+/*****************************我自己加的********************************/
 
 using namespace std;
 
@@ -630,6 +636,26 @@ static void Commulink_Server(void* pvParameters)
 						{
 							//消息解包完成
 							
+							
+													/*********我自己加的部分*********/
+							vector3<double> T265_position;
+							//我看了下commulonk.cpp应该是包含了mavlink_msg_vision_position_estimate.h的，没有直接包含，应该间接包含了。因为在他下拉的头文件里看到了，而且这样编译没有报错。
+						//	T265_position.x=mavlink_msg_vision_position_estimate_get_x(&msg);
+						//	T265_position.y=mavlink_msg_vision_position_estimate_get_y(&msg);
+             // T265_position.z=mavlink_msg_vision_position_estimate_get_z(&msg);	
+							
+							//下面是加入坐标系变换和尺度变换后的,，其实坐标系变换很简单。
+							T265_position.x=100*mavlink_msg_vision_position_estimate_get_y(&msg);
+						  T265_position.y=100*mavlink_msg_vision_position_estimate_get_x(&msg);
+              T265_position.z=-100*mavlink_msg_vision_position_estimate_get_z(&msg);	
+              //我应该还需要在这里做一下坐标系的变换，还有单位的变换，T265的坐标单位是米，ACfly单位是厘米。							
+							//似乎x  y   z要放到它定义好的vector这种数据类型里面。
+             PositionSensorUpdatePosition( 9, T265_position, true);	//maxi:后面的四个参数似乎都可以不写,都是默认参数似乎可以不写，其他的传感器似乎也是写着三个参数，第三个参数ture对应的bool available					
+							//maxi:我于2020.10.9  21:21写好了，而且编译没有错误！！！！！！！！个人独立完成。
+							/*********我自己加的部分********/
+							
+							
+							
 							//如果消息处理函数存在
 							//处理消息
 							if( msg.msgid < Mavlink_RC_Process_Count )
@@ -652,6 +678,23 @@ static void Commulink_Server(void* pvParameters)
 
 void init_Commulink()
 {
+	/********************我自己加的部分**************************/
+	//我需不需要设置一下串口波特率？
+	SetBaudRate_Uart1( 115200, 2, 2 );
+	//maxi:我这里可能要加个传感器注册函数。我可能还要把init_Commulink()这个函数加到传感器驱动初始化的文件frv_main.cpp里面。我看了下，它已经加进去了，看来我的理解是对的！！！mvalink就像一个传感器
+	//maxi:延时默认为0 了，TIMEOUT默认都是-1，优先级都为0
+	PositionSensorRegister( 
+			9 ,\
+			Position_Sensor_Type_RangePositioning ,\
+			Position_Sensor_DataType_s_xyz ,\
+			Position_Sensor_frame_ENU ,\
+			0,\
+			0 ,\
+			0 , \
+			-1 \
+		);
+	/***********************我自己加的部分*************************/
+	
 	//初始化互斥锁
 	for( uint8_t i = 0; i < MAVLINK_COMM_NUM_BUFFERS; ++i )
 	{
