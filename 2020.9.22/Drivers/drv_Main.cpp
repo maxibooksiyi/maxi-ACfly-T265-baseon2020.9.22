@@ -68,7 +68,11 @@ void init_drv_Main()
 	
 	//通信端口初始化
 	init_drv_USB();	
+	
 	init_drv_Uart1();
+	/***********我自己加的部分********************/
+	SetBaudRate_Uart1( 115200, 2, 2 );
+	/***********我自己加的部分********************/
 	init_drv_Uart3();
 	init_drv_Uart5();
 	init_drv_Uart7();
@@ -86,6 +90,7 @@ void init_drv_Main()
 	init_drv_GPS();
 	init_drv_ultrasonic();
 	init_drv_OpticalFlow();
+	
 	
 	//可选外设
 	init_drv_TFMini();

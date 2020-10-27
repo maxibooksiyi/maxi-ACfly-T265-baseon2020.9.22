@@ -679,10 +679,13 @@ static void Commulink_Server(void* pvParameters)
 void init_Commulink()
 {
 	/********************我自己加的部分**************************/
+	/**********
 	//我需不需要设置一下串口波特率？
-	SetBaudRate_Uart1( 115200, 2, 2 );
+	SetBaudRate_Uart1(115200, 2, 2 );  //确实是加上这句话屏幕就不亮了。
 	//maxi:我这里可能要加个传感器注册函数。我可能还要把init_Commulink()这个函数加到传感器驱动初始化的文件frv_main.cpp里面。我看了下，它已经加进去了，看来我的理解是对的！！！mvalink就像一个传感器
 	//maxi:延时默认为0 了，TIMEOUT默认都是-1，优先级都为0
+	*******/
+	//SetBaudRate_Uart1( 115200, 2, 2 );  //确实是加上这句话屏幕就不亮了。
 	PositionSensorRegister( 
 			9 ,\
 			Position_Sensor_Type_RangePositioning ,\
@@ -693,6 +696,7 @@ void init_Commulink()
 			0 , \
 			-1 \
 		);
+	//传感器9注册成功了的，屏幕上9的位置显示为了一个点。
 	/***********************我自己加的部分*************************/
 	
 	//初始化互斥锁
