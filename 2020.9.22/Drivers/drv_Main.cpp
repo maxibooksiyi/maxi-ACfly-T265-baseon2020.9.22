@@ -71,7 +71,7 @@ void init_drv_Main()
 	
 	init_drv_Uart1();
 	/***********我自己加的部分********************/
-	SetBaudRate_Uart1( 115200, 2, 2 );
+	SetBaudRate_Uart1( 57600, 2, 2 );  //树莓派上波特率设置的是57600
 	/***********我自己加的部分********************/
 	init_drv_Uart3();
 	init_drv_Uart5();
