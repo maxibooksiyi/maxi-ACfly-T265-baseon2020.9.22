@@ -334,8 +334,15 @@ static void GUI_Server(void* pvParameters)
 		
 		/*Z轴*/
 			//Vz
-			get_VelocityENU_Ctrl(&vec);
-			sprintf( str, "%3.1f", vec.z );
+			
+			
+/****************************我自己修改的部分*****************************/
+//到时候要恢复你就把这部分覆盖回去就行了。
+//我把显示的Vz   Vx   Vy信息改为显示位置信息Z   X   Y  
+		//	get_VelocityENU_Ctrl(&vec);
+		  vector3<double> posi;
+		  get_Position(&posi);
+			sprintf( str, "%3.1f", posi.z );
 			DrawFont16x8( str, 96, 49, WHITE );
 			//AltitudeHealth
 			PosSensorHealthInf1 posinfz;			
@@ -354,11 +361,14 @@ static void GUI_Server(void* pvParameters)
 			
 		/*XY轴*/
 			//Vx
-			sprintf( str, "%3.1f", vec.x );
+			sprintf( str, "%3.1f", posi.x );
 			DrawFont16x8( str, 128, 49, WHITE );
 			//Vy
-			sprintf( str, "%3.1f", vec.y );
+			sprintf( str, "%3.1f", posi.y );
 			DrawFont16x8( str, 144, 49, WHITE );
+/****************************我自己修改的部分*****************************/		
+			
+			
 			//PositionHealth
 			PosSensorHealthInf2 posinfxy;
 			if( get_Health_XY(&posinfxy) )

@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\ACFly.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\ACFly.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6130100: Last Updated: Wed Oct 28 08:43:35 2020
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6130100: Last Updated: Wed Oct 28 17:06:48 2020
 <BR><P>
 <H3>Maximum Stack Usage =       4128 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -2888,6 +2888,7 @@ Global Symbols
 <LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SDLog_Msg_LocalPositionNed(double)
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL10GUI_ServerPv
 <LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL24Msg32_LOCAL_POSITION_NEDhP17__mavlink_message
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL13Msg74_VFR_HUDhP17__mavlink_message
 <LI><a href="#[303]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_get_LineFlightDistance(double*, double)
@@ -3095,7 +3096,6 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[236]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_AccelerationENU_Ctrl(vector3&lang;double&rang;*, double)
 <LI><a href="#[246]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SDLog_Msg_DebugVect(const char*, double*, unsigned char, double)
 <LI><a href="#[24b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_is_inFlight(bool*, double)
-<LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_VelocityENU_Ctrl(vector3&lang;double&rang;*, double)
 <LI><a href="#[1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_release
 <LI><a href="#[1d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
 <LI><a href="#[241]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_Airframe_quat(Quaternion*, double)
@@ -3107,6 +3107,7 @@ Global Symbols
 <LI><a href="#[24f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_Position_MSStatus()
 <LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_WindDisturbance(vector3&lang;double&rang;*, double)
 <LI><a href="#[24a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;is_Attitude_Control_Enabled(bool*, double)
+<LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_VelocityENU_Ctrl(vector3&lang;double&rang;*, double)
 <LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TD4_SL::track4(double, double)
 <LI><a href="#[259]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Attitude_Control_get_Target_RollPitch(double*, double*, double)
 <LI><a href="#[256]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_Target_Throttle(double*, double)
@@ -3532,12 +3533,12 @@ Global Symbols
 <LI><a href="#[283]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadParamGroup(SName, unsigned long long*, bool*, double)
 <LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_RTC_Time
 <LI><a href="#[1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SDLog_Txt1(const char*, unsigned short, double)
-<LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_VelocityENU_Ctrl(vector3&lang;double&rang;*, double)
 <LI><a href="#[20a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetPositionSensor(unsigned char, Position_Sensor*, double)
 <LI><a href="#[28a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_AuxChannelCount()
 <LI><a href="#[28b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Aux_PWM_Out(double, unsigned char)
 <LI><a href="#[289]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_OptimalGlobal_XY(PosSensorHealthInf2*, double)
 <LI><a href="#[211]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_Attitude_quat(Quaternion*, double)
+<LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_VelocityENU_Ctrl(vector3&lang;double&rang;*, double)
 <LI><a href="#[20b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_sqrt
 <LI><a href="#[28c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_cos
 <LI><a href="#[20c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan2
@@ -3829,13 +3830,13 @@ Global Symbols
 <LI><a href="#[283]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadParamGroup(SName, unsigned long long*, bool*, double)
 <LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_RTC_Time
 <LI><a href="#[1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SDLog_Txt1(const char*, unsigned short, double)
-<LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_VelocityENU_Ctrl(vector3&lang;double&rang;*, double)
 <LI><a href="#[20a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetPositionSensor(unsigned char, Position_Sensor*, double)
 <LI><a href="#[28a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_AuxChannelCount()
 <LI><a href="#[28b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Aux_PWM_Out(double, unsigned char)
 <LI><a href="#[289]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_OptimalGlobal_XY(PosSensorHealthInf2*, double)
 <LI><a href="#[211]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_Attitude_quat(Quaternion*, double)
 <LI><a href="#[288]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AuxCamTakePhoto()
+<LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_VelocityENU_Ctrl(vector3&lang;double&rang;*, double)
 <LI><a href="#[20b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_sqrt
 <LI><a href="#[28c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_cos
 <LI><a href="#[20c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan2
@@ -4423,8 +4424,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
 <LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL10GUI_ServerPv
-<LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_AuxFuncs(const Receiver*)
+<BR>[Called By]<UL><LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_AuxFuncs(const Receiver*)
 <LI><a href="#[288]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AuxCamTakePhoto()
 <LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ctrl_Position()
 </UL>
@@ -8048,7 +8048,6 @@ Global Symbols
 <LI><a href="#[232]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SaveParamGroup(SName, double)
 <LI><a href="#[208]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadParamGroup(SName, unsigned long long*, bool*, unsigned short, unsigned short, double)
 <LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UpdateParam(SName, unsigned long long, double)
-<LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_VelocityENU_Ctrl(vector3&lang;double&rang;*, double)
 <LI><a href="#[20a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetPositionSensor(unsigned char, Position_Sensor*, double)
 <LI><a href="#[291]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetMagnetometer(unsigned char, IMU_Sensor*, double)
 <LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_Health_XY(PosSensorHealthInf2*, double)
@@ -8099,6 +8098,7 @@ Global Symbols
 <LI><a href="#[289]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_OptimalGlobal_XY(PosSensorHealthInf2*, double)
 <LI><a href="#[2bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_OptimalGlobal_Z(PosSensorHealthInf1*, double)
 <LI><a href="#[211]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_Attitude_quat(Quaternion*, double)
+<LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_VelocityENU_Ctrl(vector3&lang;double&rang;*, double)
 <LI><a href="#[375]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_queue_send
 <LI><a href="#[3c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_mutex_unlock
 <LI><a href="#[2c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_OptimalGlobal_XYZ(PosSensorHealthInf3*, double)
@@ -8239,7 +8239,6 @@ Global Symbols
 <LI><a href="#[232]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SaveParamGroup(SName, double)
 <LI><a href="#[208]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadParamGroup(SName, unsigned long long*, bool*, unsigned short, unsigned short, double)
 <LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UpdateParam(SName, unsigned long long, double)
-<LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_VelocityENU_Ctrl(vector3&lang;double&rang;*, double)
 <LI><a href="#[20a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetPositionSensor(unsigned char, Position_Sensor*, double)
 <LI><a href="#[291]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetMagnetometer(unsigned char, IMU_Sensor*, double)
 <LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_Health_XY(PosSensorHealthInf2*, double)
@@ -8284,6 +8283,7 @@ Global Symbols
 <LI><a href="#[289]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_OptimalGlobal_XY(PosSensorHealthInf2*, double)
 <LI><a href="#[2bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_OptimalGlobal_Z(PosSensorHealthInf1*, double)
 <LI><a href="#[211]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_Attitude_quat(Quaternion*, double)
+<LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_VelocityENU_Ctrl(vector3&lang;double&rang;*, double)
 <LI><a href="#[3c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_semaphore_wait
 <LI><a href="#[2c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_OptimalGlobal_XYZ(PosSensorHealthInf3*, double)
 <LI><a href="#[24c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_Position_Ctrl(vector3&lang;double&rang;*, double)
@@ -9286,9 +9286,9 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[1b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
 <LI><a href="#[317]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelayUntil
 <LI><a href="#[2b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_AirframeY_quat(Quaternion*, double)
+<LI><a href="#[224]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_Position(vector3&lang;double&rang;*, double)
 <LI><a href="#[2be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskGetTickCount
 <LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xEventGroupWaitBits
-<LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_VelocityENU_Ctrl(vector3&lang;double&rang;*, double)
 <LI><a href="#[20a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetPositionSensor(unsigned char, Position_Sensor*, double)
 <LI><a href="#[297]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_WritePicture(unsigned short, unsigned short, unsigned short, unsigned short, void*, double)
 <LI><a href="#[291]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetMagnetometer(unsigned char, IMU_Sensor*, double)

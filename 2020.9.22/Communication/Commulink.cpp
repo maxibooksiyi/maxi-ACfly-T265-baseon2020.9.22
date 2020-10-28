@@ -686,6 +686,7 @@ void init_Commulink()
 	//maxi:延时默认为0 了，TIMEOUT默认都是-1，优先级都为0
 	*******/
 	//SetBaudRate_Uart1( 115200, 2, 2 );  //确实是加上这句话屏幕就不亮了。
+	
 	PositionSensorRegister( 
 			9 ,\
 			Position_Sensor_Type_RangePositioning ,\
@@ -696,6 +697,18 @@ void init_Commulink()
 			0 , \
 			-1 \
 		);
+	/***
+	PositionSensorRegister( 
+			9 ,\
+			Position_Sensor_Type_RelativePositioning ,\
+			Position_Sensor_DataType_s_xyz ,\
+			Position_Sensor_frame_ENU ,\
+			0,\
+			0 ,\
+			0 , \
+			-1 \
+		);
+		***/
 	//传感器9注册成功了的，屏幕上9的位置显示为了一个点。
 	/***********************我自己加的部分*************************/
 	
