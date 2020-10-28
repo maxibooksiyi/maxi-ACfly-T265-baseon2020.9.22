@@ -62,7 +62,7 @@ static void Debug_task(void* pvParameters)
 					
 			
 			Position_Sensor pos2;
-			GetPositionSensor(internal_baro_sensor_index,&pos);
+			GetPositionSensor(9,&pos);
 			GetPositionSensor(external_baro_sensor_index,&pos2);
 			mavlink_msg_debug_vect_pack_chan( 
 				get_CommulinkSysId() ,	//system id
@@ -71,9 +71,9 @@ static void Debug_task(void* pvParameters)
 				&msg_sd ,
 				"2" ,	//name
 				TIME::get_System_Run_Time() * 1e6 , 	//boot ms
-				debug_test[3] ,
-				debug_test[4] ,
-				debug_test[5] );
+				pos.position.x ,
+				pos.position.y ,
+				pos.position.z );
 			mavlink_msg_to_send_buffer(port->write, 
 																 port->lock,
 																 port->unlock,
