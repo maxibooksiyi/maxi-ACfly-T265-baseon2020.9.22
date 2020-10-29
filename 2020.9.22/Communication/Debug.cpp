@@ -64,6 +64,8 @@ static void Debug_task(void* pvParameters)
 			Position_Sensor pos2;
 			GetPositionSensor(9,&pos);
 			GetPositionSensor(external_baro_sensor_index,&pos2);
+			
+			/********************我自己改动的地方**********************/
 			mavlink_msg_debug_vect_pack_chan( 
 				get_CommulinkSysId() ,	//system id
 				get_CommulinkCompId() ,	//component id
@@ -74,6 +76,8 @@ static void Debug_task(void* pvParameters)
 				pos.position.x*0.01 ,
 				pos.position.y*0.01 ,
 				pos.position.z*0.01 );
+				/********************我自己改动的地方**********************/
+				
 			mavlink_msg_to_send_buffer(port->write, 
 																 port->lock,
 																 port->unlock,

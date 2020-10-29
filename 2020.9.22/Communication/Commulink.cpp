@@ -636,6 +636,7 @@ static void Commulink_Server(void* pvParameters)
 						{
 							//消息解包完成
 							
+							/*********我自己加的部分*********/
 							if( msg.msgid == MAVLINK_MSG_ID_VISION_POSITION_ESTIMATE )
 							{
 													/*********我自己加的部分*********/
@@ -655,6 +656,7 @@ static void Commulink_Server(void* pvParameters)
 								//maxi:我于2020.10.9  21:21写好了，而且编译没有错误！！！！！！！！个人独立完成。
 								/*********我自己加的部分********/
 							}
+							/*********我自己加的部分*********/
 							
 							
 							//如果消息处理函数存在
