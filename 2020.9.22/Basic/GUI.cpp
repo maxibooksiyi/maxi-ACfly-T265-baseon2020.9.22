@@ -294,10 +294,16 @@ static void GUI_Server(void* pvParameters)
 	DrawFont16x8( "Rol:  0.0", 48, 17, WHITE );
 	DrawFont16x8( "Pit:  0.0", 64, 17, WHITE );
 	DrawFont16x8( "Yaw:  0.0", 80, 17, WHITE );
-	DrawFont16x8( "Vz:   0.0", 96, 17, WHITE );
+			
+			
+/****************************我自己修改的部分*****************************/	
+	DrawFont16x8( "Z :   0.0", 96, 17, WHITE );
 	DrawFont16x8( "HthP:  0%", 112, 9, WHITE );
-	DrawFont16x8( "Vx:   0.0", 128, 17, WHITE );
-	DrawFont16x8( "Vy:   0.0", 144, 17, WHITE );
+	DrawFont16x8( "X :   0.0", 128, 17, WHITE );
+	DrawFont16x8( "Y :   0.0", 144, 17, WHITE );
+/****************************我自己修改的部分*****************************/		
+			
+			
 	DrawFont16x8( "Mag:", 160, 9, WHITE );	DrawFont16x8( "Rc:x", 160, 62, WHITE );
 	DrawFont16x8( "\x1f\x1f\x1f", 176, 17, WHITE );
 	DrawFont16x8( "Pos:", 192, 9, WHITE );
