@@ -71,9 +71,9 @@ static void Debug_task(void* pvParameters)
 				&msg_sd ,
 				"2" ,	//name
 				TIME::get_System_Run_Time() * 1e6 , 	//boot ms
-				pos.position.x ,
-				pos.position.y ,
-				pos.position.z );
+				pos.position.x*0.01 ,
+				pos.position.y*0.01 ,
+				pos.position.z*0.01 );
 			mavlink_msg_to_send_buffer(port->write, 
 																 port->lock,
 																 port->unlock,
